@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projects.css">
+    <title>My Projects</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <h1>My Projects</h1>
+        <h2>Feel Free To Explore Some of My projects</h2>
+    </header>
+    <div class="container">
+        <div class="project">
+            <img src="Assets/Penthouse.png" alt="Project 1 Thumbnail">
+            <h3>Project 1</h3>
+            <p>Over Here Is Just A Simple Landing Page Created With Only Html And Css.</p>
+            <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+            <img src="Assets/Spaa.png" alt="Project 2 Thumbnail">
+            <h3>Project 2</h3>
+            <p>A Simple And Unique Design Using Frontend Codes. View The Full Project With The Link Below</p>
+            <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+            <video src="Assets/Site.mp4" alt="Project 3 Thumbnail" controls></video>
+            <h3>Project 3</h3>
+            <p>A Short Video On One Of Our Projects That involed Html, Css And A Touch Of Javascript.</p>
+            <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.createElement("div");
+            modal.classList.add("fullscreen-modal");
+            modal.innerHTML = `
+                <span class="close-btn">&times;</span>
+                <img src="" alt="Fullscreen Content" />
+                <video src="" controls></video>
+            `;
+            document.body.appendChild(modal);
+
+            const closeBtn = modal.querySelector(".close-btn");
+            const modalImg = modal.querySelector("img");
+            const modalVideo = modal.querySelector("video");
+
+            document.querySelectorAll(".project img, .project video").forEach((element) => {
+                element.addEventListener("click", () => {
+                    if (element.tagName === "IMG") {
+                        modalImg.src = element.src;
+                        modalImg.style.display = "block";
+                        modalVideo.style.display = "none";
+                    } else if (element.tagName === "VIDEO") {
+                        modalVideo.src = element.src;
+                        modalVideo.style.display = "block";
+                        modalImg.style.display = "none";
+                    }
+                    modal.classList.add("active");
+                });
+            });
+
+            closeBtn.addEventListener("click", () => {
+                modal.classList.remove("active");
+                modalImg.src = "";
+                modalVideo.src = "";
+            });
+
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove("active");
+                    modalImg.src = "";
+                    modalVideo.src = "";
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const hamMenu = document.querySelector(".ham-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamMenu.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    });
+    </script>
+</body>
+</html>

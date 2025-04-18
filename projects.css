@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2, 2, 71); /* Match the nav background color */
+    color: white; /* Ensure text is readable on the blue background */
+}
+
+header {
+    background-color: rgb(2, 2, 71); /* Same as the nav background */
+    color: #f5deb3; /* Soft gold for text */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid #d4af37; /* Optional: Add a gold border for separation */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.project {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.project img,
+.project video {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer; /* Indicate that the element is clickable */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.project img:hover,
+.project video:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.project h3 {
+    margin: 0.5rem 0;
+}
+.project p {
+    color: #555;
+}
+.project a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #007BFF;
+    text-decoration: none;
+}
+.project a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366; /* Dark blue background */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffd700; /* Gold text */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f5deb3; /* Soft gold on hover */
+}
+
+.ham-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.ham-menu span {
+    height: 3px;
+    width: 25px;
+    background-color: #ffd700; /* Gold color */
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #003366; /* Dark blue background */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar.active .nav-links li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .ham-menu {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when active */
+    }
+}
+
+.fullscreen-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-modal img,
+.fullscreen-modal video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.fullscreen-modal.active {
+    display: flex; /* Show the modal when active */
+}
+
+.fullscreen-modal .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}

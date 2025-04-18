@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(0, 0, 0, 0.5)50%), url(Assets/Bl.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.off-screen-menu{
+    background-color: rgb(26, 8, 110);
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active{
+    right: 0;
+}
+
+.off-screen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.off-screen-menu ul li {
+    margin: 20px 0;
+}
+
+.off-screen-menu ul li a {
+    text-decoration: none;
+    color: #000; /* Dark text for contrast */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.off-screen-menu ul li a:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #f5deb3; /* Soft gold text on hover */
+}
+
+nav{
+    padding: 1rem;
+    display: flex;
+}
+
+.ham-menu{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: #6f86ff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.link{
+    text-align: right; /* Align the link to the right */
+    margin-right: 20px; /* Add some spacing from the right edge */
+}
+
+.link a {
+    text-decoration: none; /* Remove underline from the link */
+    color: white; /* Set the link color */
+    font-family: 'Courier New', Courier, monospace; /* Match the font style */
+    font-size: 18px; /* Adjust font size */
+    padding: 10px 15px; /* Add padding for better spacing */
+    border: 1px solid white; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.link a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add a hover background */
+    color: black; /* Change text color on hover */
+}
+
+h3{
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding-top: 150px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-container button {
+    background-color: blue; /* Blue background */
+    color: white; /* White text */
+    border: 1px solid yellow; /* Yellow border */
+    padding: 10px 20px; /* Add padding for better spacing */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 50px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 10px; /* Add spacing between buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.button-container button a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from the button */
+}
+
+.button-container button:hover {
+    background-color: rgb(2, 3, 41);/* Change background to yellow on hover */
+    color: blue; /* Change text color to blue on hover */
+}
+
+.button-container a{
+    text-decoration: none; /* Remove underline from the link */
+    color: white; /* Set the link color */
+    font-size: 16px; /* Adjust font size */
+    padding: 10px 15px; /* Add padding for better spacing */
+    border-radius: 100px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}

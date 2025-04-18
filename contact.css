@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#001f3f, #003366); /* Blue gradient background */
+    color: white; /* Ensure text is readable on the blue background */
+}
+
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2 {
+    font-weight: 600;
+    color: #ffd700; /* Gold color for the title */
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title h3 {
+    font-weight: 500;
+    color: #f5deb3; /* Soft gold for the subtitle */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #ffd700; /* Gold color for the line */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #003366; /* Dark blue text */
+    border-radius: 50px;
+    background-color: #f5deb3; /* Soft gold background */
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+    background-color: #f5deb3; /* Soft gold background */
+    color: #003366; /* Dark blue text */
+}
+
+.contact-inputs:hover {
+    border: 2px solid #ffd700; /* Gold border on hover */
+}
+
+.contact-inputs::placeholder {
+    color: #666; /* Neutral placeholder color */
+}
+
+.contact-left button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #003366; /* Dark blue background */
+    color: #ffd700; /* Gold text */
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-left button:hover {
+    background-color: #ffd700; /* Gold background on hover */
+    color: #003366; /* Dark blue text on hover */
+}
+
+.contact-left button:active {
+    transform: scale(0.95);
+}
+
+.contact-right img {
+    width: 500px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.back-button {
+    margin: 20px;
+}
+
+.back-button button {
+    background-color: #333;
+    color: #f5deb3; /* Soft gold */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: #f5deb3; /* Soft gold */
+    color: #333;
+}
+
+.back-icon {
+    margin: 20px;
+}
+
+.back-icon a {
+    text-decoration: none;
+    color: #ffd700; /* Gold color for the back link */
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.back-icon a:hover {
+    color: #f5deb3; /* Soft gold on hover */
+}
+
+.back-icon i {
+    margin-right: 8px; /* Add spacing between the icon and text */
+}
+
+@media (max-width: 800px) {
+    .contact-inputs {
+        width: 80vw;
+    }
+    .contact-right {
+        display: none;
+    }
+}

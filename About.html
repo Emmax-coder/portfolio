@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="Aboutt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="about_container">
+        <div class="about_contents">
+
+            <!--  *****  Image Section Starts  *****  -->
+              <section class="imagesection">
+                <img src="Assets/Daniel.jpg">
+              </section>
+
+            <!--  *****  Image Section Ends  *****  -->
+
+            <!--  *****  Info Section Starts *****  -->
+
+            <section class="infosection">
+                <h1>About Me</h1>
+                <h2>Professional Web Designer & Developer Having 5 Years Of Experience</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi blanditiis quos. Pariatur magni debitis sit fugit quos facilis sequi?.
+                   
+                  
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi blanditiis quos. Pariatur magni debitis sit fugit quos facilis sequi?.
+                  
+                </p>
+                <div class="personalinfo">
+                    <div><span>Name:</span><span>Ekeh Daniel</span></div>
+                    <div><span>Age:</span><span>21 Years</span></div>
+                    <div><span>Email:</span><span>ekehitel@gmail.com</span></div>
+                    <div><span>Address:</span><span>No 4 Ojike Street</span></div>
+                </div>
+                <div class="button">
+                    <button><a href="cv.html">Download CV</a></button>
+                </div>
+            </section>
+            <!--  *****  Info Section Ends   *****  --> 
+
+            <!--  *****  Skills Section Starts  *****-->
+     <section class="Skillssection">
+
+    <div class="skill">
+        <div class="subject">Hard Work</div>
+            <div class="Progress_bar">
+            <div class="Progress_line" value="94%" style="max-width: 94%;"></div>
+        </div>
+    </div>
+
+        <div class="skill">
+            <div class="subject">Web Designing</div>
+               <div class="Progress_bar">
+               <div class="Progress_line" value="75%" style="max-width: 75%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="subject">Creativity</div>
+               <div class="Progress_bar">
+               <div class="Progress_line" value="73%" style="max-width: 73%;"></div>
+               </div>
+           </div>
+
+           <div class="skill">
+            <div class="subject">Web Development</div>
+               <div class="Progress_bar">
+               <div class="Progress_line" value="85%" style="max-width: 85%;"></div>
+               </div>
+           </div>
+
+     </section>
+
+            <!--  *****  Skills Section Ends  *****  -->
+
+
+        </div>
+    </div>
+    <footer class="footer">
+         <hr>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Past Clients & Collaboration</h4>
+                    <ul>
+                        <li><a href="#">National Building Museum</a></li>
+                        <li><a href="#">Comcast</a></li>
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">Temple University</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Skills & Tools</h4>
+                    <ul>
+                        <li><a href="#">Brand Identity</a></li>
+                        <li><a href="#">Brand Strategy</a></li>
+                        <li><a href="#">Web & Digital Design</a></li>
+                        <li><a href="#">Html Css Javascript</a></li>
+                        <li><a href="#">2D & 3D Illusions</a></li>
+                        <li><a href="#">Motion Graphics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recognition</h4>
+                    <ul>
+                        <li><a href="#">Typewolf Site Of the Day</a></li>
+                        <li><a href="#">Typewolf Site Of The Day</a></li>
+                        <li><a href="#">Awards Honorable Mention</a></li>
+                      
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const hamMenu = document.querySelector(".ham-menu");
+                const navbar = document.querySelector(".navbar");
+        
+                hamMenu.addEventListener("click", () => {
+                    navbar.classList.toggle("active");
+                });
+            });
+        </script>
+</body>
+</html>
